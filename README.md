@@ -2,6 +2,8 @@
 
 **GitHub stores code. Mnema stores context.**
 
+![Mnema in action](demo.gif)
+
 ```bash
 npx mnemakit init
 ```
@@ -161,6 +163,22 @@ git commit -m "feat: add project brain"
 
 ---
 
+## Cloud sync (beta)
+
+Everything above works fully offline — `init`, `learn`, and `explain` need no account and no network. Your Project Brain lives in your repo.
+
+If you want to sync a brain across machines or share it with teammates, there's an optional cloud layer (currently in beta):
+
+```bash
+npx mnemakit connect   # link this project to the cloud
+npx mnemakit sync      # push your brain to the cloud
+npx mnemakit pull      # pull the latest brain on another machine
+```
+
+> **Beta:** the sync backend runs on a free tier and may be slow to wake on first request. The local commands are the stable core — cloud sync is an experiment in progress. Feedback welcome.
+
+---
+
 ## Detected stacks
 
 Mnema currently detects:
@@ -182,12 +200,12 @@ Missing your stack? [Open a PR](#contributing) — the scanner is easy to extend
 
 ## Roadmap
 
-- `mnema sync` — push brain to a team registry
 - `mnema diff` — show what changed since last init
-- AI-powered brain updates using the Anthropic API
+- AI-powered brain enrichment (analyze the repo more deeply, suggest decisions)
+- Web dashboard for browsing team brains
 - VS Code extension
 - Cursor extension (native `.mnema/` sidebar)
-- GitHub Action to keep the brain in sync with the repo
+- GitHub Action to keep the brain in sync with the repo automatically
 
 ---
 
