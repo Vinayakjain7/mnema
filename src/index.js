@@ -7,6 +7,7 @@ import { dirname, join } from 'path';
 
 import { initCommand }       from './commands/init.js';
 import { learnCommand }      from './commands/learn.js';
+import { scanCommand }       from './commands/scan.js';
 import { explainCommand }    from './commands/explain.js';
 import { connectCommand }    from './commands/connect.js';
 import { syncCommand }       from './commands/sync.js';
@@ -38,6 +39,13 @@ program
   .description('Record an architectural decision into the Project Brain')
   .option('--dir <path>', 'target repository path', process.cwd())
   .action(learnCommand);
+
+program
+  .command('scan')
+  .description('Analyze git history to surface architectural decisions')
+  .option('--dir <path>', 'target repository path', process.cwd())
+  .option('--enrich', 'use an LLM (your own key) to infer the reasoning behind each decision')
+  .action(scanCommand);
 
 program
   .command('explain')
