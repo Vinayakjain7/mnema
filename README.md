@@ -5,10 +5,10 @@
 ![Mnema in action](demo.gif)
 
 ```bash
-npx @fwufewio/mnema init
+npx mnemakit init
 ```
 
-> Installs as the `@fwufewio/mnema` package. Prefer a global install? Run `npm i -g @fwufewio/mnema` and then use the `mnema` command directly.
+> Installs as the `mnemakit` package. Prefer a global install? Run `npm i -g mnemakit` and then use the `mnema` command directly.
 
 ---
 
@@ -32,20 +32,20 @@ You re-explain the same context, session after session.
 ```bash
 # Analyze your repo and generate a Project Brain
 cd your-project
-npx @fwufewio/mnema init
+npx mnemakit init
 
 # Record an architectural decision
-npx @fwufewio/mnema learn
+npx mnemakit learn
 
 # Generate a full project summary
-npx @fwufewio/mnema explain
+npx mnemakit explain
 ```
 
 ---
 
 ## What it does
 
-### `npx @fwufewio/mnema init`
+### `npx mnemakit init`
 
 Scans your repository (`package.json`, `requirements.txt`, `Cargo.toml`, `Dockerfile`, and more), detects your stack, and generates:
 
@@ -82,7 +82,7 @@ Auto-generated `rules.md`:
 
 ---
 
-### `npx @fwufewio/mnema learn`
+### `npx mnemakit learn`
 
 Record an architectural decision interactively:
 
@@ -99,7 +99,7 @@ Now when an AI agent suggests MongoDB, it can read this decision and understand 
 
 ---
 
-### `npx @fwufewio/mnema explain`
+### `npx mnemakit explain`
 
 Generates a full project summary — useful for onboarding new developers and AI agents:
 
@@ -170,9 +170,9 @@ Everything above works fully offline — `init`, `learn`, and `explain` need no 
 If you want to sync a brain across machines or share it with teammates, there's an optional cloud layer (currently in beta):
 
 ```bash
-npx @fwufewio/mnema connect   # link this project to the cloud
-npx @fwufewio/mnema sync      # push your brain to the cloud
-npx @fwufewio/mnema pull      # pull the latest brain on another machine
+npx mnemakit connect   # link this project to the cloud
+npx mnemakit sync      # push your brain to the cloud
+npx mnemakit pull      # pull the latest brain on another machine
 ```
 
 > **Beta:** the sync backend runs on a free tier and may be slow to wake on first request. The local commands are the stable core — cloud sync is an experiment in progress. Feedback welcome.
