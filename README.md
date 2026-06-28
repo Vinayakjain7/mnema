@@ -5,10 +5,10 @@
 ![Mnema in action](demo.gif)
 
 ```bash
-npx mnema init
+npx @fwufewio/mnema init
 ```
 
-> Installs as the `mnema` package. Prefer a global install? Run `npm i -g mnema` and then use the `mnema` command directly.
+> Installs as the `@fwufewio/mnema` package. Prefer a global install? Run `npm i -g @fwufewio/mnema` and then use the `mnema` command directly.
 
 ---
 
@@ -32,20 +32,20 @@ You re-explain the same context, session after session.
 ```bash
 # Analyze your repo and generate a Project Brain
 cd your-project
-npx mnema init
+npx @fwufewio/mnema init
 
 # Record an architectural decision
-npx mnema learn
+npx @fwufewio/mnema learn
 
 # Generate a full project summary
-npx mnema explain
+npx @fwufewio/mnema explain
 ```
 
 ---
 
 ## What it does
 
-### `npx mnema init`
+### `npx @fwufewio/mnema init`
 
 Scans your repository (`package.json`, `requirements.txt`, `Cargo.toml`, `Dockerfile`, and more), detects your stack, and generates:
 
@@ -82,7 +82,7 @@ Auto-generated `rules.md`:
 
 ---
 
-### `npx mnema learn`
+### `npx @fwufewio/mnema learn`
 
 Record an architectural decision interactively:
 
@@ -99,7 +99,7 @@ Now when an AI agent suggests MongoDB, it can read this decision and understand 
 
 ---
 
-### `npx mnema explain`
+### `npx @fwufewio/mnema explain`
 
 Generates a full project summary — useful for onboarding new developers and AI agents:
 
@@ -170,9 +170,9 @@ Everything above works fully offline — `init`, `learn`, and `explain` need no 
 If you want to sync a brain across machines or share it with teammates, there's an optional cloud layer (currently in beta):
 
 ```bash
-npx mnema connect   # link this project to the cloud
-npx mnema sync      # push your brain to the cloud
-npx mnema pull      # pull the latest brain on another machine
+npx @fwufewio/mnema connect   # link this project to the cloud
+npx @fwufewio/mnema sync      # push your brain to the cloud
+npx @fwufewio/mnema pull      # pull the latest brain on another machine
 ```
 
 > **Beta:** the sync backend runs on a free tier and may be slow to wake on first request. The local commands are the stable core — cloud sync is an experiment in progress. Feedback welcome.

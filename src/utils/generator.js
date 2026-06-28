@@ -67,7 +67,7 @@ function buildBrainMd(p, projectName) {
   lines.push('## Decisions');
   lines.push('');
   lines.push('> Architectural decisions are recorded in `.mnema/decisions/`.');
-  lines.push('> Run `npx mnema learn` to add a new decision.');
+  lines.push('> Run `npx @fwufewio/mnema learn` to add a new decision.');
   lines.push('');
 
   lines.push('## Preferences');
@@ -204,7 +204,7 @@ function describeArchitecture(p) {
 
   return parts.length > 0
     ? parts.join(' ')
-    : 'Architecture details not yet captured. Run `npx mnema learn` to add context.';
+    : 'Architecture details not yet captured. Run `npx @fwufewio/mnema learn` to add context.';
 }
 
 function buildRules(p) {

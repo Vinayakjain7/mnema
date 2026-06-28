@@ -14,7 +14,7 @@ export async function connectCommand(opts) {
 
   if (!existsSync(brainDir)) {
     console.log(chalk.yellow('  No .mnema/ found.'));
-    console.log(`  Run ${chalk.cyan('npx mnema init')} first.\n`);
+    console.log(`  Run ${chalk.cyan('npx @fwufewio/mnema init')} first.\n`);
     process.exit(1);
   }
 
@@ -96,7 +96,7 @@ export async function connectCommand(opts) {
     console.log('');
     console.log(chalk.yellow('  ⚠ Add .mnema/config.json to .gitignore — it contains your token.'));
     console.log('');
-    console.log(`  ${chalk.bold('Next:')} Run ${chalk.cyan('npx mnema sync')} to push your brain to the cloud.`);
+    console.log(`  ${chalk.bold('Next:')} Run ${chalk.cyan('npx @fwufewio/mnema sync')} to push your brain to the cloud.`);
     console.log('');
 
   } catch (err) {

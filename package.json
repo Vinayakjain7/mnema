@@ -1,10 +1,13 @@
 {
-  "name": "mnema",
+  "name": "@fwufewio/mnema",
   "version": "0.3.1",
   "description": "Repository intelligence layer for AI coding agents. GitHub stores code. Mnema stores context.",
   "type": "module",
   "bin": {
     "mnema": "src/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "start": "node src/index.js",

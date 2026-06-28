@@ -8,7 +8,7 @@ export async function explainCommand(opts) {
 
   if (!existsSync(brainDir)) {
     console.log(chalk.yellow('\n  No .mnema/ found.'));
-    console.log(`  Run ${chalk.cyan('npx mnema init')} first.\n`);
+    console.log(`  Run ${chalk.cyan('npx @fwufewio/mnema init')} first.\n`);
     process.exit(1);
   }
 
@@ -63,7 +63,7 @@ function outputTerminal({ projectJson, brainMd, rulesMd, decisions, dir }) {
   // Decisions
   console.log(`  ${chalk.bold('Decisions')}  ${chalk.dim(`(${decisions.length} recorded)`)}`);
   if (decisions.length === 0) {
-    console.log(`    ${chalk.dim('None yet. Run')} ${chalk.cyan('npx mnema learn')} ${chalk.dim('to add one.')}`);
+    console.log(`    ${chalk.dim('None yet. Run')} ${chalk.cyan('npx @fwufewio/mnema learn')} ${chalk.dim('to add one.')}`);
   } else {
     decisions.forEach((d, i) => {
       console.log(`    ${chalk.green(String(i + 1).padStart(2))}. ${chalk.white(d.title)}`);
@@ -87,7 +87,7 @@ function outputTerminal({ projectJson, brainMd, rulesMd, decisions, dir }) {
   // Footer
   console.log(chalk.dim('  ─'.repeat(25)));
   console.log(`  ${chalk.dim('Files:')} ${chalk.cyan('.mnema/brain.md')}  ${chalk.cyan('rules.md')}  ${chalk.cyan('skills.md')}  ${chalk.cyan('decisions/')}`);
-  console.log(`  ${chalk.dim('Update decisions:')} ${chalk.cyan('npx mnema learn')}`);
+  console.log(`  ${chalk.dim('Update decisions:')} ${chalk.cyan('npx @fwufewio/mnema learn')}`);
   console.log('');
 }
 
