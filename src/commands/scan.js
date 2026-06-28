@@ -11,7 +11,12 @@ export async function scanCommand(opts) {
 
   console.log(chalk.bold.cyan('\n  Mnema scan') + '\n');
   console.log('  Reading your git history to surface architectural decisions.');
-  console.log(`  ${chalk.dim('Everything here runs locally — nothing is uploaded.')}\n`);
+  if (enrich) {
+    console.log(`  ${chalk.dim('Git analysis runs locally, but with --enrich, commit metadata')}`);
+    console.log(`  ${chalk.dim('(subjects, changed filenames, diffstats) is sent to your chosen LLM provider.')}\n`);
+  } else {
+    console.log(`  ${chalk.dim('Everything here runs locally — nothing is uploaded.')}\n`);
+  }
 
   if (!isGitRepo(dir)) {
     console.log(chalk.yellow('  This folder is not a git repository.'));
