@@ -11,11 +11,11 @@ export async function syncCommand(opts) {
 
   // Guards
   if (!existsSync(brainDir)) {
-    console.log(chalk.yellow('  No .mnema/ found. Run: npx mnemakit init\n'));
+    console.log(chalk.yellow('  No .mnema/ found. Run: npx mnema init\n'));
     process.exit(1);
   }
   if (!existsSync(configPath)) {
-    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnemakit connect\n'));
+    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnema connect\n'));
     process.exit(1);
   }
 
@@ -78,7 +78,7 @@ export async function syncCommand(opts) {
 
   console.log('');
   console.log(`  ${chalk.bold('Done.')} Brain is live in the cloud.`);
-  console.log(`  ${chalk.dim('Team members can pull with:')} ${chalk.cyan('npx mnemakit pull')}`);
+  console.log(`  ${chalk.dim('Team members can pull with:')} ${chalk.cyan('npx mnema pull')}`);
   console.log('');
 }
 

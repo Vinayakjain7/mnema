@@ -64,7 +64,7 @@ export async function initCommand(opts) {
     // Empty decisions README
     writeFileSync(
       join(brainDir, 'decisions', 'README.md'),
-      '# Decisions\n\nArchitectural decisions recorded by `npx mnemakit learn`.\n\nEach file follows the ADR format: decision, reason, alternatives considered, and why alternatives were rejected.\n'
+      '# Decisions\n\nArchitectural decisions recorded by `npx mnema learn`.\n\nEach file follows the ADR format: decision, reason, alternatives considered, and why alternatives were rejected.\n'
     );
 
     writeSpinner.succeed('Files written');
@@ -83,7 +83,7 @@ export async function initCommand(opts) {
   console.log('');
   console.log(`  ${chalk.bold('Next steps:')}`);
   console.log(`  1. Review and edit ${chalk.cyan('.mnema/brain.md')} — add context the scanner couldn't detect`);
-  console.log(`  2. Run ${chalk.cyan('npx mnemakit learn')} to record your first architectural decision`);
+  console.log(`  2. Run ${chalk.cyan('npx mnema learn')} to record your first architectural decision`);
   console.log(`  3. Commit ${chalk.cyan('.mnema/')} to your repo — it's your team's shared project brain`);
   console.log('');
 }

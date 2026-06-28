@@ -15,7 +15,7 @@ export async function learnCommand(opts) {
   // Guard: not initialized
   if (!existsSync(brainDir)) {
     console.log(chalk.yellow('  No .mnema/ found in this directory.'));
-    console.log(`  Run ${chalk.cyan('npx mnemakit init')} first.\n`);
+    console.log(`  Run ${chalk.cyan('npx mnema init')} first.\n`);
     process.exit(1);
   }
 
@@ -75,7 +75,7 @@ export async function learnCommand(opts) {
   console.log('');
   console.log(`  ${chalk.green('✓')} Decision saved: ${chalk.bold(`.mnema/decisions/${filename}`)}`);
   console.log('');
-  console.log(`  ${chalk.dim('Run')} ${chalk.cyan('npx mnemakit explain')} ${chalk.dim('to see all decisions summarized.')}`);
+  console.log(`  ${chalk.dim('Run')} ${chalk.cyan('npx mnema explain')} ${chalk.dim('to see all decisions summarized.')}`);
   console.log('');
 }
 

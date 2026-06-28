@@ -10,7 +10,7 @@ export async function pullCommand(opts) {
   console.log(chalk.bold.cyan('\n  Mnema pull') + '\n');
 
   if (!existsSync(configPath)) {
-    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnemakit connect\n'));
+    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnema connect\n'));
     process.exit(1);
   }
 
@@ -68,7 +68,7 @@ export async function enrichCommand(opts) {
   console.log(`  ${chalk.dim('Upgrading your Project Brain with Claude AI...')}\n`);
 
   if (!existsSync(configPath)) {
-    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnemakit connect\n'));
+    console.log(chalk.yellow('  Not connected to cloud. Run: npx mnema connect\n'));
     process.exit(1);
   }
 
@@ -116,11 +116,11 @@ export async function enrichCommand(opts) {
         if (d.reason) console.log(`       ${chalk.dim('→')} ${chalk.dim(d.reason)}`);
       });
       console.log('');
-      console.log(`  Run ${chalk.cyan('npx mnemakit learn')} to record them.`);
+      console.log(`  Run ${chalk.cyan('npx mnema learn')} to record them.`);
     }
 
     console.log('');
-    console.log(`  Pull the enriched files: ${chalk.cyan('npx mnemakit pull')}`);
+    console.log(`  Pull the enriched files: ${chalk.cyan('npx mnema pull')}`);
     console.log('');
 
   } catch (err) {
